@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Smoke Suite">
+    <test name="Smoke test on Edge">
+        <classes>
+            <class name="Priority">
+                <!--
+                the Tag include automatically excludes in other method
+                -->
+                <methods>
+                    <include name="logIn"/>
+                </methods>
+            </class>
+
+            <class name="Dependency">
+                <methods>
+                    <include name="logIn"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

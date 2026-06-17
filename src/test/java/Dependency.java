@@ -23,8 +23,9 @@ public class Dependency {
         driver.findElement(By.id("username")).sendKeys("tomsmith");
         driver.findElement(By.cssSelector("[type = 'password']")).sendKeys("SuperSecretPassword!");
         driver.findElement(By.className("radius")).click();
+
         Assert.assertTrue(driver.findElement(By.id("flash")).isDisplayed(), "error message is displayed");
-        throw new RuntimeException("test failed");
+        // throw new RuntimeException("test failed");
     }
 
     @Test(dependsOnMethods = "logIn")
