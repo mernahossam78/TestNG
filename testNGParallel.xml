@@ -1,5 +1,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Parallel" parallel="methods" thread-count="3">
+    <listeners>
+        <listener class-name="CustomListeners.TestNGListeners"/>
+    </listeners>
     <!--Because i sent 1 class that contains methods,
      im running those methods in parallel, if i sent 2 classes,
     it will run those classes in parallel-->
